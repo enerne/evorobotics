@@ -1,4 +1,4 @@
-import pyrosim.pyrosim as p
+import Pyrosim.Pyrosim as p
 
 def Create_World():
     p.Start_SDF("world.sdf")

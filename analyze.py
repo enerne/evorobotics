@@ -9,5 +9,7 @@ import numpy
 sine = numpy.load("data/back_target_angles.npy")
 sine2 = numpy.load("data/front_target_angles.npy")
 plt.plot(sine)
+
+
 plt.plot(sine2)
 plt.show()

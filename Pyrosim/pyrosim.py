@@ -1,18 +1,18 @@
 import pybullet as p
 
-from pyrosim.nndf import NNDF
+from Pyrosim.nndf import NNDF
 
-from pyrosim.linksdf  import LINK_SDF
+from Pyrosim.linksdf  import LINK_SDF
 
-from pyrosim.linkurdf import LINK_URDF
+from Pyrosim.linkurdf import LINK_URDF
 
-from pyrosim.model import MODEL
+from Pyrosim.model import MODEL
 
-from pyrosim.sdf   import SDF
+from Pyrosim.sdf   import SDF
 
-from pyrosim.urdf  import URDF
+from Pyrosim.urdf  import URDF
 
-from pyrosim.joint import JOINT
+from Pyrosim.joint import JOINT
 
 SDF_FILETYPE  = 0
 
@@ -22,7 +22,7 @@ NNDF_FILETYPE   = 2
 
 # global availableLinkIndex
 
-# global linkNamesToIndices
+global linkNamesToIndices
 
 def End():
 

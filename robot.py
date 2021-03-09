@@ -1,5 +1,5 @@
 import pybullet as p
-from pyrosim import pyrosim
+from Pyrosim import pyrosim
 
 from sensor import SENSOR
 

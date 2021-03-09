@@ -1,16 +1,20 @@
-from pyrosim.commonFunctions import Save_Whitespace
+from Pyrosim.commonFunctions import Save_Whitespace
 
-class COLLISION_SDF: 
+class COLLISION_URDF: 
 
-    def __init__(self,geometry):
+    def __init__(self,origin,geometry):
+
+        self.origin = origin
 
         self.geometry = geometry
  
-        self.depth = 3
+        self.depth = 2
 
     def Save(self,f):
 
         self.Save_Start_Tag(f)
+
+        self.origin.Save(f)
 
         self.geometry.Save(f)
 
