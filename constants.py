@@ -3,7 +3,7 @@ import numpy
 PI = numpy.pi
 numsteps = 1000
 max_motor_force = 100
-timestep = 1.0 / 240.0
+timestep = 1.0 / 480.0
 
 target_angles = numpy.linspace(-PI, PI, numsteps)
 amplitude, frequency, phaseOffset = PI/4, 20, PI/4

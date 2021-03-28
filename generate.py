@@ -30,6 +30,12 @@ def Generate_Brain():
     p.Send_Motor_Neuron(name=3, jointName="Torso_BackLeg")
     p.Send_Motor_Neuron(name=4, jointName="Torso_FrontLeg")
 
+    p.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=-0.5)
+    p.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=1.2)
+
+    # p.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=1.5)
+    # p.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=-0.2)
+    #
 
     p.End()
 
