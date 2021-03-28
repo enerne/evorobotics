@@ -1,7 +1,7 @@
 import numpy
 
 PI = numpy.pi
-numsteps = 1000
+numsteps = 400
 max_motor_force = 100
 timestep = 1.0 / 480.0
 

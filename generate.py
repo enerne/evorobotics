@@ -1,5 +1,5 @@
 import pyrosim.pyrosim as p
-
+import random
 
 def Create_World():
     p.Start_SDF("world.sdf")
@@ -30,8 +30,16 @@ def Generate_Brain():
     p.Send_Motor_Neuron(name=3, jointName="Torso_BackLeg")
     p.Send_Motor_Neuron(name=4, jointName="Torso_FrontLeg")
 
-    p.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=-0.5)
-    p.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=1.2)
+    # when both are -1, they should return to stable
+    # when they both touch the ground, back leg should move (slower?) than front leg
+    # when only one is touching the ground, it should move slower than the one in the air
+
+    for i in [0, 1, 2]:
+        for j in [3, 4]:
+            p.Send_Synapse(sourceNeuronName=i, targetNeuronName=j, weight=random.random())
+
+
+
 
     # p.Send_Synapse(sourceNeuronName=0, targetNeuronName=3, weight=1.5)
     # p.Send_Synapse(sourceNeuronName=1, targetNeuronName=3, weight=-0.2)
