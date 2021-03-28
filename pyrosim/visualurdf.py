@@ -1,12 +1,18 @@
-from Pyrosim.commonFunctions import Save_Whitespace
+from pyrosim.material import MATERIAL
 
-class VISUAL_SDF: 
+from pyrosim.commonFunctions import Save_Whitespace
 
-    def __init__(self,geometry):
+class VISUAL_URDF: 
+
+    def __init__(self,origin,geometry):
+
+        self.origin = origin
 
         self.geometry = geometry 
 
-        self.depth = 3
+        self.material = MATERIAL()
+
+        self.depth = 2
 
     def Save(self,f):
 
@@ -26,7 +32,11 @@ class VISUAL_SDF:
 
     def Save_Elements(self,f):
 
+        self.origin.Save(f)
+
         self.geometry.Save(f)
+
+        self.material.Save(f)
 
     def Save_End_Tag(self,f):
 

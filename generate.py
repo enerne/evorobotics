@@ -1,7 +1,7 @@
-import Pyrosim.Pyrosim as p
+import pyrosim.pyrosim as p
 
 def Create_World():
-    p.Start_SDF("world.sdf")
+    p.Start_SDF("../EvoBotsNY/world.sdf")
     length = 1
     width = 2
     height = 3
@@ -10,7 +10,7 @@ def Create_World():
 
 
 def Create_Robot():
-    p.Start_URDF("body.urdf")
+    p.Start_URDF("../EvoBotsNY/body.urdf")
     p.Send_Cube(name="Torso", pos=[0, 0, 1.5], size=[1, 1, 1])
     p.Send_Joint(name="Torso_BackLeg", parent="Torso", child="BackLeg", type="revolute", position="-0.5 0 1")
     p.Send_Cube(name="BackLeg", pos=[-0.5,0,-0.5], size=[1,1,1])

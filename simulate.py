@@ -1,6 +1,6 @@
 import pybullet as p
 import pybullet_data
-import Pyrosim.pyrosim as pyrosim
+import pyrosim.pyrosim as pyrosim
 import time
 import random
 import numpy
@@ -16,10 +16,9 @@ from simulation import SIMULATION
 
 #
 
-# Pyrosim.Prepare_To_Simulate("body.urdf")
+# pyrosim.Prepare_To_Simulate("body.urdf")
 # p.loadSDF("world.sdf")
-# backLegSensorValues = numpy.zeros(c.numsteps)
-# frontLegSensorValues = numpy.zeros(c.numsteps)
+
 #
 
 # p.disconnect()

@@ -1,18 +1,20 @@
-from Pyrosim.masssdf         import MASS_SDF
+from pyrosim.massurdf    import MASS_URDF
 
-from Pyrosim.inertiasdf      import INERTIA_SDF
+from pyrosim.inertiaurdf import INERTIA_URDF
 
-from Pyrosim.commonFunctions import Save_Whitespace
+from pyrosim.commonFunctions import Save_Whitespace
 
-class INERTIAL_SDF:
+class INERTIAL_URDF:
 
-    def __init__(self):
+    def __init__(self,origin):
 
-        self.depth = 3
+        self.depth = 2
 
-        self.mass = MASS_SDF()
+        self.origin = origin
 
-        self.inertia = INERTIA_SDF()
+        self.mass = MASS_URDF()
+
+        self.inertia = INERTIA_URDF()
 
     def Save(self,f):
 
@@ -31,6 +33,8 @@ class INERTIAL_SDF:
         f.write('<inertial>\n')
 
     def Save_Elements(self,f):
+
+        self.origin.Save(f)
 
         self.mass.Save(f)
 

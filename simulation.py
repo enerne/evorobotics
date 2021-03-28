@@ -21,37 +21,10 @@ class SIMULATION:
         for i in range(0, c.numsteps):
             print(i)
             p.stepSimulation()
-            # backLegSensorValues[i] = Pyrosim.Get_Touch_Sensor_Value_For_Link("BackLeg")
-            # frontLegSensorValues[i] = Pyrosim.Get_Touch_Sensor_Value_For_Link("FrontLeg")
-            #
-            # # BACK LEG MOTOR
-            # Pyrosim.Set_Motor_For_Joint(
-            #
-            #     bodyIndex=robot,
-            #
-            #     jointName="Torso_BackLeg",
-            #
-            #     controlMode=p.POSITION_CONTROL,
-            #
-            #     targetPosition=c.b_target_angles[i],
-            #
-            #     maxForce=c.max_motor_force)
-            #
-            # # FRONT LEG MOTOR
-            # Pyrosim.Set_Motor_For_Joint(
-            #
-            #     bodyIndex=robot,
-            #
-            #     jointName="Torso_FrontLeg",
-            #
-            #     controlMode=p.POSITION_CONTROL,
-            #
-            #     targetPosition=c.f_target_angles[i],
-            #
-            #     maxForce=c.max_motor_force)
-            #
+            self.robot.Sense(i)
+            self.robot.Act(i)
+
             time.sleep(c.timestep)
-            pass
 
 
 def __del__(self):

@@ -1,14 +1,14 @@
-from Pyrosim.originurdf      import ORIGIN_URDF
+from pyrosim.originurdf      import ORIGIN_URDF
 
-from Pyrosim.geometryurdf    import GEOMETRY_URDF
+from pyrosim.geometryurdf    import GEOMETRY_URDF
 
-from Pyrosim.inertialurdf    import INERTIAL_URDF
+from pyrosim.inertialurdf    import INERTIAL_URDF
 
-from Pyrosim.visualurdf      import VISUAL_URDF
+from pyrosim.visualurdf      import VISUAL_URDF
 
-from Pyrosim.collisionurdf   import COLLISION_URDF
+from pyrosim.collisionurdf   import COLLISION_URDF
 
-from Pyrosim.commonFunctions import Save_Whitespace
+from pyrosim.commonFunctions import Save_Whitespace
 
 class LINK_URDF:
 

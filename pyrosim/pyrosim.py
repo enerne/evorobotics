@@ -1,18 +1,18 @@
 import pybullet as p
 
-from Pyrosim.nndf import NNDF
+from pyrosim.nndf import NNDF
 
-from Pyrosim.linksdf  import LINK_SDF
+from pyrosim.linksdf  import LINK_SDF
 
-from Pyrosim.linkurdf import LINK_URDF
+from pyrosim.linkurdf import LINK_URDF
 
-from Pyrosim.model import MODEL
+from pyrosim.model import MODEL
 
-from Pyrosim.sdf   import SDF
+from pyrosim.sdf   import SDF
 
-from Pyrosim.urdf  import URDF
+from pyrosim.urdf  import URDF
 
-from Pyrosim.joint import JOINT
+from pyrosim.joint import JOINT
 
 SDF_FILETYPE  = 0
 
