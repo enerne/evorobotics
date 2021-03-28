@@ -21,7 +21,7 @@ class MOTOR:
 
         print(self.motor_values)
 
-    def Set_Value(self, robot, i):
+    def Set_Value(self, robot, desiredAngle):
         # FRONT LEG MOTOR
         pyrosim.Set_Motor_For_Joint(
 
@@ -31,7 +31,7 @@ class MOTOR:
 
             controlMode=p.POSITION_CONTROL,
 
-            targetPosition=self.motor_values[i],
+            targetPosition=desiredAngle,
 
             maxForce=c.max_motor_force)
 

@@ -1,6 +1,6 @@
 import math
 
-import pyrosim.Pyrosim as Pyrosim
+import pyrosim.pyrosim as Pyrosim
 
 import pyrosim.constants as c
 
