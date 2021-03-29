@@ -19,7 +19,7 @@ class MOTOR:
             self.motor_values[i] = self.amplitude * numpy.sin(
                 self.frequency * self.motor_values[i] + self.offset)
 
-        print(self.motor_values)
+        # print(self.motor_values)
 
     def Set_Value(self, robot, desiredAngle):
         # FRONT LEG MOTOR

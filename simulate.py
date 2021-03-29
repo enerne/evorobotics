@@ -6,6 +6,7 @@ import random
 import numpy
 import constants as c
 from simulation import SIMULATION
+import sys
 #
 # PI = numpy.pi
 #
@@ -26,4 +27,7 @@ from simulation import SIMULATION
 # numpy.save("data/backlegtouches.npy", backLegSensorValues)
 # numpy.save("data/frontlegtouches.npy", frontLegSensorValues)
 #
-simulation = SIMULATION()
+
+directOrGUI = sys.argv[1]
+simulation = SIMULATION(directOrGUI)
+simulation.Get_Fitness()
