@@ -1,8 +1,8 @@
 import numpy
 
 PI = numpy.pi
-numsteps = 1200
-max_motor_force = 100
+numsteps = 350
+max_motor_force = 200
 timestep = 1.0 / 480.0
 
 target_angles = numpy.linspace(-PI, PI, numsteps)
@@ -14,4 +14,4 @@ b_target_angles = numpy.array([b_amplitude * numpy.sin(b_frequency * i + b_phase
 f_target_angles = numpy.array([f_amplitude * numpy.sin((f_frequency * i + f_phaseOffset)) for i in target_angles])
 
 
-numberOfGenerations = 20
+numberOfGenerations = 200
