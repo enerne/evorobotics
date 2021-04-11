@@ -29,5 +29,6 @@ import sys
 #
 
 directOrGUI = sys.argv[1]
-simulation = SIMULATION(directOrGUI)
+solutionID = sys.argv[2]
+simulation = SIMULATION(directOrGUI, solutionID)
 simulation.Get_Fitness()
